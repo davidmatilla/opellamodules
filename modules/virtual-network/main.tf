@@ -1,9 +1,9 @@
-resource "null_resource" "resource_group" {
+resource "azurerm_resource_group" "resource_group" {
   name     = var.resource_group_name
   location = var.location
 }
 
-resource "null_resource" "network_security_group" {
+resource "azurerm_network_security_group" "network_security_group" {
   name                = var.network_security_group_name
   location            = azurerm_resource_group.resource_group.location
   resource_group_name = azurerm_resource_group.resource_group.name
@@ -11,7 +11,7 @@ resource "null_resource" "network_security_group" {
   tags = var.tags
 }
 
-resource "null_resource" "virtual_network" {
+resource "azurerm_virtual_network" "virtual_network" {
   name                = var.virtual_network_name
   location            = azurerm_resource_group.resource_group.location
   resource_group_name = azurerm_resource_group.resource_group.name
