@@ -16,6 +16,6 @@ resource "azurerm_storage_blob" "blob" {
   name                   = var.blob_name
   storage_account_name   = azurerm_storage_account.storage_account.name
   storage_container_name = azurerm_storage_container.storage_container.name
-  type                   = var.type
-  source                 = var.source
+  type                   = var.blob_type
+  source                 = var.blob_source
 }

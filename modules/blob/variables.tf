@@ -42,13 +42,13 @@ variable "blob_name" {
   type        = string
 }
 
-variable "type" {
+variable "blob_type" {
   description = "The type of the Storage Blob (Block, Append, Page)"
   type        = string
   default     = "Block"
 }
 
-variable "source" {
+variable "blob_source" {
   description = "The local file path of the blob to be uploaded"
   type        = string
 }
